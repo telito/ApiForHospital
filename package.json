@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js",
+    "start": "node dist/server",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "db:migrate": "sequelize db:migrate",
+    "db:undo:all": "sequelize db:migrate:undo:all",
+    "db:seed": "sequelize db:seed:all"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.6",
+    "eslint": "^8.12.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "uuid": "^8.3.1",
+    "yarn": "^1.22.10",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.5",
+    "sequelize-cli": "^6.2.0",
+    "sucrase": "^3.16.0"
+  }
+}
